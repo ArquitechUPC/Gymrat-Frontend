@@ -13,7 +13,12 @@
     "start-all": "concurrently \"npm run start-auth\" \"npm run start-classes\" \"npm run start-plans\""
   },
   "dependencies": {
-    "vue": "^3.4.21"
+    "axios": "^1.7.2",
+    "primeflex": "^3.3.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^3.52.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
