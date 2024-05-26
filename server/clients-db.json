@@ -1,0 +1,74 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "email": "john@example.com",
+      "gymName": "Best Gym",
+      "phoneNumber": "123456789",
+      "address": "123 Fitness St.",
+      "city": "Workoutville",
+      "planId": 1
+    },
+    {
+      "id": 2,
+      "username": "jane_smith",
+      "email": "jane@example.com",
+      "gymName": "Fitness Hub",
+      "phoneNumber": "987654321",
+      "address": "456 Health Ave.",
+      "city": "Fit City",
+      "planId": 2
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "title": "Lose Weight",
+      "description": "Goal to lose 10kg in 3 months",
+      "targetDate": "2024-08-25",
+      "measurementGoal": {
+        "id": 1,
+        "type": "Weight",
+        "value": 70,
+        "unit": "kg",
+        "date": "2024-05-25",
+        "clientId": 1
+      },
+      "clientId": 1
+    },
+    {
+      "id": 2,
+      "title": "Gain Muscle",
+      "description": "Goal to gain 5kg of muscle in 6 months",
+      "targetDate": "2024-11-25",
+      "measurementGoal": {
+        "id": 2,
+        "type": "Weight",
+        "value": 75,
+        "unit": "kg",
+        "date": "2024-05-25",
+        "clientId": 2
+      },
+      "clientId": 2
+    }
+  ],
+  "measurements": [
+    {
+      "id": 1,
+      "type": "Weight",
+      "value": 70,
+      "unit": "kg",
+      "date": "2024-05-25",
+      "clientId": 1
+    },
+    {
+      "id": 2,
+      "type": "Weight",
+      "value": 75,
+      "unit": "kg",
+      "date": "2024-05-25",
+      "clientId": 2
+    }
+  ]
+}

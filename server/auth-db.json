@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "email": "john@example.com",
+      "password": "$2a$10$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36IxtQ3KOYCjae8T3HZkXqK",
+      "gymName": "Best Gym",
+      "phoneNumber": "123456789",
+      "address": "123 Fitness St.",
+      "city": "Workoutville"
+    },
+    {
+      "id": 2,
+      "username": "jane_doe",
+      "email": "jane@example.com",
+      "password": "$2a$10$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36IxtQ3KOYCjae8T3HZkXqK",
+      "gymName": "Fitness Hub",
+      "phoneNumber": "987654321",
+      "address": "456 Health Ave.",
+      "city": "Fit City"
+    }
+  ],
+  "tokens": [
+    {
+      "userId": 1,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "expiresAt": "2024-06-25T14:00:00Z"
+    },
+    {
+      "userId": 2,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "expiresAt": "2024-06-25T14:00:00Z"
+    }
+  ]
+}

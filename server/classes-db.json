@@ -1,0 +1,22 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "Yoga Class",
+      "description": "A relaxing yoga session for all levels.",
+      "instructor": "John Doe",
+      "schedule": "2024-06-01T10:00:00Z",
+      "capacity": 20,
+      "actualCapacity": 15
+    },
+    {
+      "id": 2,
+      "name": "HIIT Class",
+      "description": "High-intensity interval training for advanced levels.",
+      "instructor": "Jane Smith",
+      "schedule": "2024-06-01T12:00:00Z",
+      "capacity": 25,
+      "actualCapacity": 20
+    }
+  ]
+}
