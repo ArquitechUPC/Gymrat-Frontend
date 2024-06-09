@@ -1,16 +1,14 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './app.vue'
+import router from './router/router.js';
 
-//  Import router
 
-
-// Import PrimeVue, PrimeVue CSS, PrimeVue Icons
+//  Import PrimeVue, PrimeVue CSS, PrimeVue Icons
 import PrimeVue from 'primevue/config';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
-// Import PrimeVue Services
 
 
 // PrimeVue Material Design Theme
@@ -28,6 +26,7 @@ import Sidebar from "primevue/sidebar";
 
 createApp(App)
     .use(PrimeVue, { ripple: true })
+    .use(router)
     .component('pv-button',         Button)
     .component('pv-toolbar',        Toolbar)
     .component('pv-image',          Image)

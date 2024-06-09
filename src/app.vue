@@ -9,13 +9,8 @@ export default {
 </script>
 
 <template>
-  <ToolbarComponent></ToolbarComponent>
-  <header>
-    <h4>GYM RAT FRONTEND</h4>
-
-  </header>
-
   <main>
+    <router-view></router-view>
   </main>
 </template>
 
