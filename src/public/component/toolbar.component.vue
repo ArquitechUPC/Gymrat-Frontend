@@ -1,19 +1,3 @@
-<script>
-export default {
-  name:"toolbar-component",
-  title:"toolbarComponent",
-  data() {
-    return {
-      items: [
-        { label: 'Update', icon: 'pi pi-refresh' },
-        { label: 'Delete', icon: 'pi pi-times' }
-      ]
-    };
-  }
-}
-</script>
-
-
 <template>
   <div class="card toolbar">
     <pv-toolbar fixed>
@@ -30,12 +14,26 @@ export default {
 
       <template #end>
         <div class="right-section">
-
+          <pv-button icon="pi pi-sign-out" @click="$emit('logout')" class="toolbar-button" />
         </div>
       </template>
     </pv-toolbar>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'ToolbarComponent',
+  data() {
+    return {
+      items: [
+        {label: 'Update', icon: 'pi pi-refresh'},
+        {label: 'Delete', icon: 'pi pi-times'}
+      ]
+    };
+  }
+}
+</script>
 
 <style scoped>
 .toolbar {
@@ -52,7 +50,7 @@ export default {
 }
 
 .logo {
-  height: 1.5em; /* Ajusta la altura del logo al tamaño de la fuente del texto */
+  height: 1.5em;
   width: auto;
   margin-right: 0.5rem;
 }
