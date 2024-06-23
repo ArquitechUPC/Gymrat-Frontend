@@ -4,7 +4,12 @@ import RegisterAdminComponent from "@/public/pages/register-admin.page.vue";
 import LogOutComponent from "@/public/component/log-out.component.vue";
 import authService from "@/public/services/auth.service.js";
 import DashboardComponent from "@/public/pages/dashboard.page.vue";
+import AdminDashboardComponent from "@/admin/pages/admin-dashboard.page.vue";
 import ChangePasswordComponent from "@/public/pages/change-password.page.vue";
+import RegisterNewClientComponent from "@/admin/pages/create-new-client.page.vue";
+import CreateNewClassComponent from "@/admin/pages/create-new-class.page.vue";
+import CreateNewTrainerComponent from "@/admin/pages/create-new-trainer.page.vue";
+
 
 
 const routes = [
@@ -26,7 +31,13 @@ const routes = [
         path: '/dashboard',
         name: 'dashboard',
         component: DashboardComponent,
-        meta: { requiresAuth: true },
+        meta: { requiresAuth: false },
+    },
+    {
+        path: '/admin-dashboard',
+        name: 'admin-dashboard',
+        component: AdminDashboardComponent,
+        meta: { requiresAuth: false },
     },
     {
         path: '/logout',
@@ -37,7 +48,28 @@ const routes = [
         path: '/reset-password',
         name: 'reset-password',
         component: ChangePasswordComponent,
+    },
+    {
+        path: '/register-client',
+        name: 'register-client',
+        component: RegisterNewClientComponent,
+        meta: { requiresAuth: false },
+    },
+    {
+        path: '/create-new-class',
+        name: 'create-new-class',
+        component: CreateNewClassComponent,
+        meta: { requiresAuth: false },
+    },
+    {
+        path: '/register-trainer',
+        name: 'register-trainer',
+        component: CreateNewTrainerComponent,
+        meta: { requiresAuth: false },
     }
+
+
+
 ];
 
 const router = createRouter({

@@ -42,6 +42,7 @@ export default {
           .login(this.username, this.password)
           .then((response) => {
             console.log('Logged in:', response.data);
+            localStorage.setItem("token",response.data)
             this.$router.push('/dashboard');
           })
           .catch((error) => {

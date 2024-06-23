@@ -9,7 +9,25 @@
       </template>
 
       <template #center>
-        <pv-button icon="pi pi-bars" severity="danger" class="toolbar-button" />
+        <div class="card flex justify-content-center">
+          <pv-sidebar v-model:visible="visible" header="Sidebar">
+            <ul>
+              <li>
+                <a href="/register-client">Nuevo cliente</a>
+              </li>
+              <li>
+                <a href="/create-new-class">Nueva clase</a>
+              </li>
+              <li>
+                <a href="/register-trainer">Nueva entrenador</a>
+              </li>
+              <li>
+                <a href="/admin-dashboard">Dashboard</a>
+              </li>
+            </ul>
+          </pv-sidebar>
+          <pv-button icon="pi pi-bars" @click="visible = true" />
+        </div>
       </template>
 
       <template #end>
@@ -21,18 +39,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ToolbarComponent',
-  data() {
-    return {
-      items: [
-        {label: 'Update', icon: 'pi pi-refresh'},
-        {label: 'Delete', icon: 'pi pi-times'}
-      ]
-    };
-  }
-}
+<script setup>
+import { ref } from "vue";
+
+const visible = ref(false);
+
 </script>
 
 <style scoped>

@@ -1,0 +1,251 @@
+{
+  "Admin": [
+    {
+      "id": 1,
+      "givenUser": 101
+    },
+    {
+      "id": 2,
+      "givenUser": 102
+    }
+  ],
+  "Company": [
+    {
+      "id": 1,
+      "companyName": "GymCorp"
+    },
+    {
+      "id": 2,
+      "companyName": "FitWorld"
+    }
+  ],
+  "User": [
+    {
+      "id": 101,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "password": "hashedpassword",
+      "companyId": 1,
+      "phoneNumber": "123-456-7890",
+      "address": "123 Main St",
+      "city": "Anytown",
+      "role": "USER"
+    },
+    {
+      "id": 102,
+      "username": "janesmith",
+      "email": "janesmith@example.com",
+      "password": "hashedpassword",
+      "companyId": 1,
+      "phoneNumber": "098-765-4321",
+      "address": "456 Elm St",
+      "city": "Anytown",
+      "role": "COACH"
+    },
+    {
+      "id": 103,
+      "username": "bobjones",
+      "email": "bobjones@example.com",
+      "password": "hashedpassword",
+      "companyId": 2,
+      "phoneNumber": "321-654-0987",
+      "address": "789 Oak St",
+      "city": "Othertown",
+      "role": "USER"
+    }
+  ],
+  "Class": [
+    {
+      "id": 201,
+      "name": "Yoga",
+      "description": "A relaxing yoga class",
+      "duration": 60,
+      "actualCapacity": 10,
+      "capacity": 20,
+      "instructor": "Jane Smith",
+      "type": "Fitness",
+      "level": "Beginner",
+      "room": "Room 1",
+      "coachId": 301
+    },
+    {
+      "id": 202,
+      "name": "Pilates",
+      "description": "An intense pilates class",
+      "duration": 45,
+      "actualCapacity": 15,
+      "capacity": 15,
+      "instructor": "Bob Jones",
+      "type": "Fitness",
+      "level": "Intermediate",
+      "room": "Room 2",
+      "coachId": 301
+    }
+  ],
+  "Client": [
+    {
+      "id": 401,
+      "givenUser": 101,
+      "givenPlan": 501,
+      "classExits": 5,
+      "goals": [
+        601
+      ],
+      "measurements": [
+        701
+      ],
+      "classIds": [
+        201
+      ],
+      "status": [
+        true
+      ]
+    },
+    {
+      "id": 402,
+      "givenUser": 102,
+      "givenPlan": 502,
+      "classExits": 3,
+      "goals": [
+        602
+      ],
+      "measurements": [
+        702
+      ],
+      "classIds": [
+        202
+      ],
+      "status": [
+        true
+      ]
+    },
+    {
+      "id": 403,
+      "givenUser": 103,
+      "givenPlan": 503,
+      "classExits": 2,
+      "goals": [
+        603
+      ],
+      "measurements": [
+        703
+      ],
+      "classIds": [
+        201,
+        202
+      ],
+      "status": [
+        true,
+        false
+      ]
+    }
+  ],
+  "Goal": [
+    {
+      "id": 601,
+      "name": "Weight Loss",
+      "description": "Lose 10 kg in 3 months",
+      "startDate": "2024-01-01",
+      "endDate": "2024-04-01",
+      "measurementGoal": 701
+    },
+    {
+      "id": 602,
+      "name": "Muscle Gain",
+      "description": "Gain 5 kg of muscle",
+      "startDate": "2024-02-01",
+      "endDate": "2024-05-01",
+      "measurementGoal": 702
+    },
+    {
+      "id": 603,
+      "name": "Flexibility",
+      "description": "Increase flexibility",
+      "startDate": "2024-03-01",
+      "endDate": "2024-06-01",
+      "measurementGoal": 703
+    }
+  ],
+  "Measurement": [
+    {
+      "id": 701,
+      "date": "2024-01-01",
+      "weight": 80.5,
+      "comment": "Starting weight",
+      "chestCircumference": 100,
+      "waistCircumference": 85,
+      "hipCircumference": 95,
+      "armCircumference": 30,
+      "legCircumference": 50
+    },
+    {
+      "id": 702,
+      "date": "2024-02-01",
+      "weight": 75,
+      "comment": "Weight loss progress",
+      "chestCircumference": 98,
+      "waistCircumference": 80,
+      "hipCircumference": 90,
+      "armCircumference": 29,
+      "legCircumference": 48
+    },
+    {
+      "id": 703,
+      "date": "2024-03-01",
+      "weight": 70,
+      "comment": "Midway goal",
+      "chestCircumference": 95,
+      "waistCircumference": 78,
+      "hipCircumference": 88,
+      "armCircumference": 28,
+      "legCircumference": 46
+    }
+  ],
+  "Plan": [
+    {
+      "id": 501,
+      "name": "Monthly Plan",
+      "description": "Access to all classes for one month",
+      "cost": 50,
+      "duration": 30
+    },
+    {
+      "id": 502,
+      "name": "Quarterly Plan",
+      "description": "Access to all classes for three months",
+      "cost": 135,
+      "duration": 90
+    },
+    {
+      "id": 503,
+      "name": "Annual Plan",
+      "description": "Access to all classes for one year",
+      "cost": 500,
+      "duration": 365
+    }
+  ],
+  "Trainer": [
+    {
+      "id": 301,
+      "givenUser": 102,
+      "speciality": "Yoga",
+      "onService": true,
+      "bio": "Experienced yoga instructor",
+      "rating": 4.8,
+      "givenClasses": [
+        201
+      ]
+    },
+    {
+      "id": 302,
+      "givenUser": 103,
+      "speciality": "Pilates",
+      "onService": true,
+      "bio": "Pilates expert with 10 years of experience",
+      "rating": 4.9,
+      "givenClasses": [
+        202
+      ]
+    }
+  ]
+}
