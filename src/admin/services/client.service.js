@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/v1';
+const API_BASE_URL = 'http://20.96.176.25:8080/api/v1';
 
 const ClientService = {
     // Obtener todos los clientes
