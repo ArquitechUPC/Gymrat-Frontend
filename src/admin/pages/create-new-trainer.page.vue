@@ -38,63 +38,103 @@ export default {
 </script>
 
 <template>
-  <toolbar-component @logout="handleLogout"></toolbar-component>
-  <h1>Register New Trainer</h1>
-  <form @submit.prevent="registerTrainer">
-    <div>
-      <label for="givenUser">Usuario:</label>
-      <input type="number" v-model="trainer.givenUser" id="givenUser" required>
-    </div>
-    <div>
-      <label for="speciality">Especialidad:</label>
-      <input type="text" v-model="trainer.speciality" id="speciality" required>
-    </div>
-    <div>
-      <label for="onService">En Servicio:</label>
-      <select v-model="trainer.onService" id="onService" required>
-        <option :value="true">Sí</option>
-        <option :value="false">No</option>
-      </select>
-    </div>
-    <div>
-      <label for="bio">Biografía:</label>
-      <textarea v-model="trainer.bio" id="bio" required></textarea>
-    </div>
-    <div>
-      <label for="rating">Calificación:</label>
-      <input type="number" v-model="trainer.rating" id="rating" step="0.1" min="0" max="5" required>
-    </div>
-    <div>
-      <label for="givenClasses">Clases Dadas:</label>
-      <input type="text" v-model="trainer.givenClasses" id="givenClasses" placeholder="Use comas para separar" required>
-    </div>
-    <button type="submit">Registrar Entrenador</button>
-  </form>
+  <div class="container">
+    <toolbar-component @logout="handleLogout"></toolbar-component>
+    <h1>Registrar Nuevo Entrenador</h1>
+    <form @submit.prevent="registerTrainer" class="trainer-form">
+      <div class="form-group">
+        <label for="givenUser">Usuario:</label>
+        <input type="number" v-model="trainer.givenUser" id="givenUser" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="speciality">Especialidad:</label>
+        <input type="text" v-model="trainer.speciality" id="speciality" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="onService">En Servicio:</label>
+        <select v-model="trainer.onService" id="onService" required class="form-control">
+          <option :value="true">Sí</option>
+          <option :value="false">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="bio">Biografía:</label>
+        <textarea v-model="trainer.bio" id="bio" required class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="rating">Calificación:</label>
+        <input type="number" v-model="trainer.rating" id="rating" step="0.1" min="0" max="5" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="givenClasses">Clases Dadas:</label>
+        <input type="text" v-model="trainer.givenClasses" id="givenClasses" placeholder="Use comas para separar" required class="form-control">
+      </div>
+      <button type="submit" class="submit-button">Registrar Entrenador</button>
+    </form>
+  </div>
 </template>
 
+
 <style scoped>
-/* Estilos opcionales */
-form {
-  display: flex;
-  flex-direction: column;
+.container {
+  padding: 2rem;
+  background-color: #f4f6f8;
 }
 
-div {
-  margin-bottom: 10px;
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
 }
 
-label {
-  margin-right: 10px;
+.trainer-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-input, select, textarea {
-  padding: 5px;
-  font-size: 16px;
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-button {
-  padding: 10px;
-  font-size: 16px;
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
 }
 </style>

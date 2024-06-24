@@ -35,12 +35,7 @@ import ListClassesComponent from "@/admin/components/list-class.component.vue";
 
 export default {
   name: 'AdminDashboardComponent',
-  components: {ListClassesComponent, ListTrainerComponent, ToolbarComponent,ListClientComponent},
-  data() {
-    return {
-      // Add any data you need for the dashboard
-    };
-  },
+  components: { ListClassesComponent, ListTrainerComponent, ToolbarComponent, ListClientComponent },
   methods: {
     handleLogout() {
       authService.logout();
@@ -54,9 +49,11 @@ export default {
 };
 </script>
 
+
 <style scoped>
 .dashboard-container {
   padding: 2rem;
+  background-color: #f4f6f8;
 }
 
 .dashboard-header {
@@ -120,7 +117,13 @@ export default {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 45%; /* Adjust flex value for responsive layout */
+  flex: 1 1 45%; /* Ajustar el valor de flex para el diseño responsivo */
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  color: #2c3e50;
 }
 
 .activity-item {
@@ -141,7 +144,7 @@ export default {
   color: #666;
 }
 
-/* Responsive adjustments */
+/* Ajustes responsivos */
 @media (max-width: 768px) {
   .dashboard-section {
     flex: 1 1 100%;

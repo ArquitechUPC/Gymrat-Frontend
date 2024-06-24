@@ -11,18 +11,18 @@
       <template #center>
         <div class="card flex justify-content-center">
           <pv-sidebar v-model:visible="visible" header="Sidebar">
-            <ul>
-              <li>
-                <a href="/register-client">Nuevo cliente</a>
+            <ul class="sidebar-menu">
+              <li class="sidebar-item">
+                <a href="/register-client" class="sidebar-link">Nuevo cliente</a>
               </li>
-              <li>
-                <a href="/create-new-class">Nueva clase</a>
+              <li class="sidebar-item">
+                <a href="/create-new-class" class="sidebar-link">Nueva clase</a>
               </li>
-              <li>
-                <a href="/register-trainer">Nueva entrenador</a>
+              <li class="sidebar-item">
+                <a href="/register-trainer" class="sidebar-link">Nuevo entrenador</a>
               </li>
-              <li>
-                <a href="/admin-dashboard">Dashboard</a>
+              <li class="sidebar-item">
+                <a href="/admin-dashboard" class="sidebar-link">Dashboard</a>
               </li>
             </ul>
           </pv-sidebar>
@@ -74,5 +74,32 @@ const visible = ref(false);
 
 .toolbar-button {
   margin: 0 1rem;
+}
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  display: block;
+  transition: color 0.3s;
+}
+
+.sidebar-link:hover {
+  color: #007bff;
 }
 </style>
