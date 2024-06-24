@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/v1/classes';
+const API_URL = 'http://20.96.176.25:8080/api/v1/classes';
 
 class ClassService {
     getClasses() {
