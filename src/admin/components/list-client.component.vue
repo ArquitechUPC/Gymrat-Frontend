@@ -4,28 +4,16 @@
     <ul>
       <li v-for="client in clients" :key="client.id">
         <div>
-          <strong>ID:</strong> {{ client.id }}
+          <strong>id:</strong> {{ client.id }}
         </div>
         <div>
-          <strong>Given User:</strong> {{ client.givenUser }}
+          <strong>Class Exits:</strong> {{ client.class_exits }}
         </div>
         <div>
-          <strong>Given Plan:</strong> {{ client.givenPlan }}
+          <strong>Given Plan:</strong> {{ client.given_plan }}
         </div>
         <div>
-          <strong>Class Exits:</strong> {{ client.classExits }}
-        </div>
-        <div>
-          <strong>Goals:</strong> {{ client.goals.join(', ') }}
-        </div>
-        <div>
-          <strong>Measurements:</strong> {{ client.measurements.join(', ') }}
-        </div>
-        <div>
-          <strong>Class IDs:</strong> {{ client.classIds.join(', ') }}
-        </div>
-        <div>
-          <strong>Status:</strong> {{ client.status.join(', ') }}
+          <strong>Given User:</strong> {{ client.given_user }}
         </div>
       </li>
     </ul>

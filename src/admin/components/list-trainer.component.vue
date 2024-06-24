@@ -3,13 +3,13 @@
     <h1>Trainers</h1>
     <ul>
       <li v-for="trainer in trainers" :key="trainer.id">
-        <div><strong>ID:</strong> {{ trainer.id }}</div>
-        <div><strong>Usuario:</strong> {{ trainer.givenUser }}</div>
-        <div><strong>Especialidad:</strong> {{ trainer.speciality }}</div>
-        <div><strong>En Servicio:</strong> {{ trainer.onService ? 'Sí' : 'No' }}</div>
-        <div><strong>Biografía:</strong> {{ trainer.bio }}</div>
-        <div><strong>Calificación:</strong> {{ trainer.rating }}</div>
-        <div><strong>Clases Dadas:</strong> {{ trainer.givenClasses.join(', ') }}</div>
+        <div><strong>id:</strong> {{ trainer.id }}</div>
+        <div><strong>bio:</strong> {{ trainer.bio }}</div>
+        <div><strong>given user:</strong> {{ trainer.given_user }}</div>
+        <div><strong>on service:</strong> {{ trainer.on_service ? 'no' : 'si' }}</div>
+        <div><strong>rating:</strong> {{ trainer.rating }}</div>
+        <div><strong>speciality:</strong> {{ trainer.speciality }}</div>
+        <div><strong>given_classes:</strong> {{ trainer.given_classes}}</div>
       </li>
     </ul>
   </div>

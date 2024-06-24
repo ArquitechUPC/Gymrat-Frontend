@@ -1,10 +1,22 @@
 <template>
   <div class="dashboard-container">
     <toolbar-component @logout="handleLogout"></toolbar-component>
+    <br>
     <div class="dashboard-content">
       <div class="dashboard-section">
         <h2>Clientes</h2>
         <list-client-component></list-client-component>
+      </div>
+      <div class="dashboard-section">
+        <h2>Entrenadores</h2>
+        <list-trainer-component></list-trainer-component>
+      </div>
+    </div>
+    <br>
+    <div class="dashboard-content">
+      <div class="dashboard-section">
+        <h2>Clases</h2>
+        <list-classes-component></list-classes-component>
       </div>
       <div class="dashboard-section">
         <h2>Entrenadores</h2>
@@ -19,10 +31,11 @@ import ToolbarComponent from "@/public/component/toolbar.component.vue";
 import authService from "@/public/services/auth.service.js";
 import ListClientComponent from "@/admin/components/list-client.component.vue";
 import ListTrainerComponent from "@/admin/components/list-trainer.component.vue";
+import ListClassesComponent from "@/admin/components/list-class.component.vue";
 
 export default {
   name: 'AdminDashboardComponent',
-  components: {ListTrainerComponent, ToolbarComponent,ListClientComponent},
+  components: {ListClassesComponent, ListTrainerComponent, ToolbarComponent,ListClientComponent},
   data() {
     return {
       // Add any data you need for the dashboard

@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'http://localhost:8080';
 
 const ClientService = {
     // Obtener todos los clientes
     async getClients() {
         try {
-            const response = await axios.get(`${API_BASE_URL}/Client`);
+            const response = await axios.get(`${API_BASE_URL}/clients`);
             return response.data;
         } catch (error) {
             console.error('Error fetching clients:', error);
@@ -17,7 +17,7 @@ const ClientService = {
     // Obtener un cliente por ID
     async getClientById(clientId) {
         try {
-            const response = await axios.get(`${API_BASE_URL}/Client/${clientId}`);
+            const response = await axios.get(`${API_BASE_URL}/clients/${clientId}`);
             return response.data;
         } catch (error) {
             console.error(`Error fetching client with ID ${clientId}:`, error);
@@ -28,7 +28,7 @@ const ClientService = {
     // Crear un nuevo cliente
     async createClient(clientData) {
         try {
-            const response = await axios.post(`${API_BASE_URL}/Client`, clientData);
+            const response = await axios.post(`${API_BASE_URL}/clients`, clientData);
             return response.data;
         } catch (error) {
             console.error('Error creating client:', error);
@@ -39,7 +39,7 @@ const ClientService = {
     // Actualizar un cliente existente
     async updateClient(clientId, clientData) {
         try {
-            const response = await axios.put(`${API_BASE_URL}/Client/${clientId}`, clientData);
+            const response = await axios.put(`${API_BASE_URL}/clients/${clientId}`, clientData);
             return response.data;
         } catch (error) {
             console.error(`Error updating client with ID ${clientId}:`, error);
@@ -50,7 +50,7 @@ const ClientService = {
     // Eliminar un cliente
     async deleteClient(clientId) {
         try {
-            const response = await axios.delete(`${API_BASE_URL}/Client/${clientId}`);
+            const response = await axios.delete(`${API_BASE_URL}/clients/${clientId}`);
             return response.data;
         } catch (error) {
             console.error(`Error deleting client with ID ${clientId}:`, error);
